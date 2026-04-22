@@ -134,7 +134,10 @@ class HitBtcRequestTickerData(TickerData):
         return self.last_volume
 
     def __str__(self) -> str:
-        return f"HITBTC Ticker {self.symbol_name}: Last={self.last_price}, Bid={self.bid_price}, Ask={self.ask_price}"
+        return (
+            f"HITBTC Ticker {self.symbol_name}: "
+            f"Last={self.last_price}, Bid={self.bid_price}, Ask={self.ask_price}"
+        )
 
     def __repr__(self) -> str:
         return f"<HitBtcTickerData {self.symbol_name} last={self.last_price}>"

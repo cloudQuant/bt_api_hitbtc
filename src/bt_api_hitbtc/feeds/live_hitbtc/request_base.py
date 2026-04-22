@@ -4,9 +4,7 @@ import base64
 from typing import Any
 from urllib.parse import urlencode
 
-from bt_api_base.containers.exchanges.exchange_data import ExchangeData
 from bt_api_base.containers.requestdatas.request_data import RequestData
-from bt_api_base.containers.tickers.ticker import TickerData
 from bt_api_base.exceptions import QueueNotInitializedError
 from bt_api_base.feeds.capability import Capability
 from bt_api_base.feeds.feed import Feed

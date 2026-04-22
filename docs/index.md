@@ -11,9 +11,17 @@ pip install bt_api_hitbtc
 ```
 
 ```python
-from bt_api_hitbtc import HitbtcApi
-feed = HitbtcApi(api_key="your_key", secret="your_secret")
-ticker = feed.get_ticker("BTCUSDT")
+from bt_api_py import BtApi
+
+api = BtApi(exchange_kwargs={
+    "HITBTC___SPOT": {
+        "api_key": "your_api_key",
+        "secret": "your_secret",
+    }
+})
+
+ticker = api.get_tick("HITBTC___SPOT", "BTCUSDT")
+print(ticker)
 ```
 
 ## 中文
@@ -27,9 +35,17 @@ pip install bt_api_hitbtc
 ```
 
 ```python
-from bt_api_hitbtc import HitbtcApi
-feed = HitbtcApi(api_key="your_key", secret="your_secret")
-ticker = feed.get_ticker("BTCUSDT")
+from bt_api_py import BtApi
+
+api = BtApi(exchange_kwargs={
+    "HITBTC___SPOT": {
+        "api_key": "your_api_key",
+        "secret": "your_secret",
+    }
+})
+
+ticker = api.get_tick("HITBTC___SPOT", "BTCUSDT")
+print(ticker)
 ```
 
 ## API Reference

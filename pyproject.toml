@@ -23,3 +23,15 @@ include = ["src/"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/bt_api_hitbtc"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["I", "UP", "E", "F", "W", "TC"]
+ignore = ["TC002"]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
+"tests/**" = ["I001", "UP037"]
